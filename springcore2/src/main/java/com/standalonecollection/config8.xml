@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.3.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.3.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+
+<util:list list-class="java.util.LinkedList" id="mybestfriend">
+	<value>Nitin</value>
+	<value>Prajapat</value>
+	<value>amrit dhedh</value>
+
+
+</util:list>
+
+<util:map map-class="java.util.TreeMap" id="myfees">
+	<entry key="Physics" value="2000" />
+	<entry key="maths" value="5000"/>
+	<entry key="chemistry" value="5000"/>
+
+</util:map>
+
+<util:properties id="info">
+	<prop key="name">Nitin</prop>
+	<prop key="id">nk@123</prop>
+	<prop key="password">87952</prop>
+	
+
+</util:properties>
+
+<bean class="com.standalonecollection.person" name="p1">
+	<property name="friends" ref="mybestfriend"/>
+	<property name="fees" ref="myfees"/>
+	<property name="properties" ref="info"/>
+
+	
+	
+
+</bean>
+</beans>
